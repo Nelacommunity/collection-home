@@ -41,7 +41,7 @@ export default function AboutPage() {
                   <div className="w-40 h-40 rounded-full bg-gradient-to-br from-green-400 to-green-600 mb-6 flex items-center justify-center">
                     <span className="text-4xl font-bold text-white">BM</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-1">Brown Mafuru</h3>
+                  <h3 className="text-2xl font-bold mb-1 text-white">Brown Mafuru</h3>
                   <p className="text-green-400 font-medium mb-4">Co-Founder & CEO</p>
                   <p className="text-gray-300 mb-6">
                     With a background in AI research and educational technology, Brown leads Collection's vision to
@@ -85,7 +85,7 @@ export default function AboutPage() {
                   <div className="w-40 h-40 rounded-full bg-gradient-to-br from-green-600 to-green-400 mb-6 flex items-center justify-center">
                     <span className="text-4xl font-bold text-white">AV</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-1">Aaron Victor</h3>
+                  <h3 className="text-2xl font-bold mb-1 text-white">Aaron Victor</h3>
                   <p className="text-green-400 font-medium mb-4">Co-Founder & CTO</p>
                   <p className="text-gray-300 mb-6">
                     Aaron brings extensive expertise in voice recognition technology and machine learning to Collection.
