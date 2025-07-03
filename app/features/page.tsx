@@ -1,10 +1,10 @@
-"use client"
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client";
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Mic,
   MessageSquare,
@@ -29,31 +29,32 @@ import {
   Users,
   Heart,
   Gamepad2,
-} from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import { useState, useEffect } from "react"
+} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function FeaturesPage() {
-  const [activeFeature, setActiveFeature] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [progress, setProgress] = useState(0)
-  const [userLevel, setUserLevel] = useState(1)
-  const [xp, setXp] = useState(250)
-  const [achievements, setAchievements] = useState(3)
+  const [activeFeature, setActiveFeature] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [userLevel, setUserLevel] = useState(1);
+  const [xp, setXp] = useState(250);
+  const [achievements, setAchievements] = useState(3);
 
   // Simulate progress animation
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prev) => (prev >= 100 ? 0 : prev + 1))
-    }, 100)
-    return () => clearInterval(timer)
-  }, [])
+      setProgress((prev) => (prev >= 100 ? 0 : prev + 1));
+    }, 100);
+    return () => clearInterval(timer);
+  }, []);
 
   const features = [
     {
       icon: <Mic className="h-8 w-8" />,
       title: "Voice Recognition",
-      description: "Advanced speech recognition that understands natural language and accents",
+      description:
+        "Advanced speech recognition that understands natural language and accents",
       badge: "Core Feature",
       level: 5,
       interactive: true,
@@ -62,7 +63,8 @@ export default function FeaturesPage() {
     {
       icon: <MessageSquare className="h-8 w-8" />,
       title: "Interactive Conversations",
-      description: "Engage in natural dialogue with AI tutors that respond contextually",
+      description:
+        "Engage in natural dialogue with AI tutors that respond contextually",
       badge: "Popular",
       level: 4,
       interactive: true,
@@ -71,7 +73,8 @@ export default function FeaturesPage() {
     {
       icon: <BookOpen className="h-8 w-8" />,
       title: "Adaptive Curriculum",
-      description: "Personalized learning paths that adjust to your progress and goals",
+      description:
+        "Personalized learning paths that adjust to your progress and goals",
       badge: "Smart",
       level: 5,
       interactive: true,
@@ -89,7 +92,8 @@ export default function FeaturesPage() {
     {
       icon: <Globe className="h-8 w-8" />,
       title: "Multi-Language Support",
-      description: "Learn in your preferred language with support for 50+ languages",
+      description:
+        "Learn in your preferred language with support for 50+ languages",
       badge: "Global",
       level: 4,
       interactive: false,
@@ -98,7 +102,8 @@ export default function FeaturesPage() {
     {
       icon: <Clock className="h-8 w-8" />,
       title: "24/7 Availability",
-      description: "Access your AI tutor anytime, anywhere, at your convenience",
+      description:
+        "Access your AI tutor anytime, anywhere, at your convenience",
       badge: "Always On",
       level: 5,
       interactive: false,
@@ -107,7 +112,8 @@ export default function FeaturesPage() {
     {
       icon: <Shield className="h-8 w-8" />,
       title: "Privacy First",
-      description: "Your data is encrypted and secure with enterprise-grade protection",
+      description:
+        "Your data is encrypted and secure with enterprise-grade protection",
       badge: "Secure",
       level: 5,
       interactive: false,
@@ -116,13 +122,14 @@ export default function FeaturesPage() {
     {
       icon: <Smartphone className="h-8 w-8" />,
       title: "Cross-Platform",
-      description: "Seamless experience across desktop, mobile, and tablet devices",
+      description:
+        "Seamless experience across desktop, mobile, and tablet devices",
       badge: "Universal",
       level: 4,
       interactive: false,
       demo: null,
     },
-  ]
+  ];
 
   const gamificationFeatures = [
     {
@@ -149,46 +156,46 @@ export default function FeaturesPage() {
       description: "Compete with friends and global learners",
       progress: 40,
     },
-  ]
+  ];
 
   const getLevelColor = (level: number) => {
-    if (level >= 5) return "text-yellow-400"
-    if (level >= 4) return "text-green-400"
-    if (level >= 3) return "text-blue-400"
-    return "text-gray-400"
-  }
+    if (level >= 5) return "text-yellow-400";
+    if (level >= 4) return "text-green-400";
+    if (level >= 3) return "text-blue-400";
+    return "text-gray-400";
+  };
 
   const getBadgeColor = (badge: string) => {
     switch (badge) {
       case "Core Feature":
-        return "bg-red-600/20 text-red-400"
+        return "bg-red-600/20 text-red-400";
       case "Popular":
-        return "bg-purple-600/20 text-purple-400"
+        return "bg-purple-600/20 text-purple-400";
       case "Smart":
-        return "bg-blue-600/20 text-blue-400"
+        return "bg-blue-600/20 text-blue-400";
       case "Analytics":
-        return "bg-orange-600/20 text-orange-400"
+        return "bg-orange-600/20 text-orange-400";
       case "Global":
-        return "bg-green-600/20 text-green-400"
+        return "bg-green-600/20 text-green-400";
       case "Always On":
-        return "bg-cyan-600/20 text-cyan-400"
+        return "bg-cyan-600/20 text-cyan-400";
       case "Secure":
-        return "bg-yellow-600/20 text-yellow-400"
+        return "bg-yellow-600/20 text-yellow-400";
       default:
-        return "bg-gray-600/20 text-gray-400"
+        return "bg-gray-600/20 text-gray-400";
     }
-  }
+  };
 
   const handleFeatureClick = (index: number) => {
-    setActiveFeature(index)
+    setActiveFeature(index);
     if (features[index].interactive) {
-      setXp((prev) => prev + 10)
+      setXp((prev) => prev + 10);
       if (xp + 10 >= userLevel * 100) {
-        setUserLevel((prev) => prev + 1)
-        setAchievements((prev) => prev + 1)
+        setUserLevel((prev) => prev + 1);
+        setAchievements((prev) => prev + 1);
       }
     }
-  }
+  };
 
   const renderDemo = (demoType: string | null) => {
     switch (demoType) {
@@ -197,8 +204,16 @@ export default function FeaturesPage() {
           <div className="bg-gray-800 rounded-lg p-4 mt-4">
             <div className="flex items-center justify-between mb-3">
               <span className="text-sm text-gray-400">Voice Demo</span>
-              <Button size="sm" onClick={() => setIsPlaying(!isPlaying)} className="bg-green-600 hover:bg-green-700">
-                {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+              <Button
+                size="sm"
+                onClick={() => setIsPlaying(!isPlaying)}
+                className="bg-green-600 hover:bg-green-700"
+              >
+                {isPlaying ? (
+                  <Pause className="h-4 w-4" />
+                ) : (
+                  <Play className="h-4 w-4" />
+                )}
               </Button>
             </div>
             <div className="flex items-center space-x-2">
@@ -207,13 +222,18 @@ export default function FeaturesPage() {
                 <motion.div
                   className="bg-green-400 h-2 rounded-full"
                   animate={{ width: isPlaying ? "100%" : "0%" }}
-                  transition={{ duration: 3, repeat: isPlaying ? Number.POSITIVE_INFINITY : 0 }}
+                  transition={{
+                    duration: 3,
+                    repeat: isPlaying ? Number.POSITIVE_INFINITY : 0,
+                  }}
                 />
               </div>
             </div>
-            <p className="text-xs text-gray-400 mt-2">"Hello Collection, can you explain machine learning?"</p>
+            <p className="text-xs text-gray-400 mt-2">
+              "Hello Collection, can you explain machine learning?"
+            </p>
           </div>
-        )
+        );
       case "chat":
         return (
           <div className="bg-gray-800 rounded-lg p-4 mt-4 space-y-2">
@@ -221,10 +241,11 @@ export default function FeaturesPage() {
               <span className="text-blue-400">You:</span> What is AI?
             </div>
             <div className="bg-green-600/20 rounded-lg p-2 text-sm">
-              <span className="text-green-400">AI:</span> AI is like teaching computers to think...
+              <span className="text-green-400">AI:</span> AI is like teaching
+              computers to think...
             </div>
           </div>
-        )
+        );
       case "curriculum":
         return (
           <div className="bg-gray-800 rounded-lg p-4 mt-4">
@@ -246,7 +267,7 @@ export default function FeaturesPage() {
               <Progress value={25} className="h-2" />
             </div>
           </div>
-        )
+        );
       case "analytics":
         return (
           <div className="bg-gray-800 rounded-lg p-4 mt-4">
@@ -261,11 +282,11 @@ export default function FeaturesPage() {
               </div>
             </div>
           </div>
-        )
+        );
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -284,11 +305,15 @@ export default function FeaturesPage() {
           />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1 className="text-5xl font-bold mb-6">Interactive Features</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Discover the cutting-edge capabilities that make Collection the most advanced AI-powered learning platform
-              available today.
+              Discover the cutting-edge capabilities that make Collection the
+              most advanced AI-powered learning platform available today.
             </p>
 
             {/* User Progress Card */}
@@ -330,13 +355,22 @@ export default function FeaturesPage() {
         <div className="max-w-6xl mx-auto">
           <Tabs defaultValue="features" className="w-full">
             <TabsList className="grid w-full grid-cols-3 bg-gray-900">
-              <TabsTrigger value="features" className="data-[state=active]:bg-green-600">
+              <TabsTrigger
+                value="features"
+                className="data-[state=active]:bg-green-600"
+              >
                 Core Features
               </TabsTrigger>
-              <TabsTrigger value="gamification" className="data-[state=active]:bg-green-600">
+              <TabsTrigger
+                value="gamification"
+                className="data-[state=active]:bg-green-600"
+              >
                 Gamification
               </TabsTrigger>
-              <TabsTrigger value="interactive" className="data-[state=active]:bg-green-600">
+              <TabsTrigger
+                value="interactive"
+                className="data-[state=active]:bg-green-600"
+              >
                 Interactive Demo
               </TabsTrigger>
             </TabsList>
@@ -371,11 +405,16 @@ export default function FeaturesPage() {
                             {feature.icon}
                           </motion.div>
                           <div className="flex items-center space-x-2">
-                            <Badge className={getBadgeColor(feature.badge)}>{feature.badge}</Badge>
+                            <Badge className={getBadgeColor(feature.badge)}>
+                              {feature.badge}
+                            </Badge>
                             {feature.interactive && (
                               <motion.div
                                 animate={{ scale: [1, 1.2, 1] }}
-                                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                                transition={{
+                                  duration: 2,
+                                  repeat: Number.POSITIVE_INFINITY,
+                                }}
                               >
                                 <Sparkles className="h-4 w-4 text-yellow-400" />
                               </motion.div>
@@ -389,7 +428,9 @@ export default function FeaturesPage() {
                               <Star
                                 key={i}
                                 className={`h-3 w-3 ${
-                                  i < feature.level ? getLevelColor(feature.level) : "text-gray-600"
+                                  i < feature.level
+                                    ? getLevelColor(feature.level)
+                                    : "text-gray-600"
                                 } ${i < feature.level ? "fill-current" : ""}`}
                               />
                             ))}
@@ -397,7 +438,9 @@ export default function FeaturesPage() {
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
+                        <p className="text-gray-300 text-sm mb-4">
+                          {feature.description}
+                        </p>
 
                         <AnimatePresence>
                           {activeFeature === index && feature.demo && (
@@ -414,8 +457,14 @@ export default function FeaturesPage() {
 
                         {feature.interactive && (
                           <div className="flex items-center justify-between mt-4">
-                            <span className="text-xs text-green-400">Interactive</span>
-                            <Button size="sm" variant="ghost" className="text-green-400 hover:text-green-300 hover:bg-black">
+                            <span className="text-xs text-green-400">
+                              Interactive
+                            </span>
+                            <Button
+                              size="sm"
+                              variant="ghost"
+                              className="text-green-400 hover:text-green-300 hover:bg-black"
+                            >
                               Try Now <ArrowRight className="h-3 w-3 ml-1" />
                             </Button>
                           </div>
@@ -445,14 +494,22 @@ export default function FeaturesPage() {
                       className="bg-gray-900 rounded-lg p-6 border border-green-500/20"
                     >
                       <div className="flex items-center mb-4">
-                        <div className="text-green-400 mr-3">{feature.icon}</div>
-                        <h4 className="font-semibold text-lg">{feature.title}</h4>
+                        <div className="text-green-400 mr-3">
+                          {feature.icon}
+                        </div>
+                        <h4 className="font-semibold text-lg">
+                          {feature.title}
+                        </h4>
                       </div>
-                      <p className="text-gray-300 mb-4">{feature.description}</p>
+                      <p className="text-gray-300 mb-4">
+                        {feature.description}
+                      </p>
                       <div className="space-y-2">
                         <div className="flex justify-between text-sm">
                           <span>Progress</span>
-                          <span className="text-green-400">{feature.progress}%</span>
+                          <span className="text-green-400">
+                            {feature.progress}%
+                          </span>
                         </div>
                         <Progress value={feature.progress} className="h-2" />
                       </div>
@@ -475,21 +532,41 @@ export default function FeaturesPage() {
                     </h4>
                     <div className="space-y-3">
                       {[
-                        { name: "First Steps", desc: "Complete your first lesson", earned: true },
-                        { name: "Streak Master", desc: "7-day learning streak", earned: true },
-                        { name: "Voice Pioneer", desc: "Use voice features 50 times", earned: true },
-                        { name: "Knowledge Seeker", desc: "Complete 10 courses", earned: false },
+                        {
+                          name: "First Steps",
+                          desc: "Complete your first lesson",
+                          earned: true,
+                        },
+                        {
+                          name: "Streak Master",
+                          desc: "7-day learning streak",
+                          earned: true,
+                        },
+                        {
+                          name: "Voice Pioneer",
+                          desc: "Use voice features 50 times",
+                          earned: true,
+                        },
+                        {
+                          name: "Knowledge Seeker",
+                          desc: "Complete 10 courses",
+                          earned: false,
+                        },
                       ].map((achievement, i) => (
                         <motion.div
                           key={i}
                           className={`flex items-center space-x-3 p-3 rounded-lg ${
-                            achievement.earned ? "bg-green-600/20" : "bg-gray-800/50"
+                            achievement.earned
+                              ? "bg-green-600/20"
+                              : "bg-gray-800/50"
                           }`}
                           whileHover={{ scale: 1.02 }}
                         >
                           <div
                             className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                              achievement.earned ? "bg-yellow-400" : "bg-gray-600"
+                              achievement.earned
+                                ? "bg-yellow-400"
+                                : "bg-gray-600"
                             }`}
                           >
                             {achievement.earned ? (
@@ -499,10 +576,18 @@ export default function FeaturesPage() {
                             )}
                           </div>
                           <div>
-                            <div className={`font-medium ${achievement.earned ? "text-white" : "text-gray-400"}`}>
+                            <div
+                              className={`font-medium ${
+                                achievement.earned
+                                  ? "text-white"
+                                  : "text-gray-400"
+                              }`}
+                            >
                               {achievement.name}
                             </div>
-                            <div className="text-sm text-gray-400">{achievement.desc}</div>
+                            <div className="text-sm text-gray-400">
+                              {achievement.desc}
+                            </div>
                           </div>
                         </motion.div>
                       ))}
@@ -526,15 +611,24 @@ export default function FeaturesPage() {
                         <motion.div
                           className="text-3xl font-bold text-green-400"
                           animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                          transition={{
+                            duration: 2,
+                            repeat: Number.POSITIVE_INFINITY,
+                          }}
                         >
                           {progress}%
                         </motion.div>
-                        <div className="text-sm text-gray-400">Current Lesson</div>
+                        <div className="text-sm text-gray-400">
+                          Current Lesson
+                        </div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-blue-400">{userLevel}</div>
-                        <div className="text-sm text-gray-400">Current Level</div>
+                        <div className="text-3xl font-bold text-blue-400">
+                          {userLevel}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          Current Level
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -550,7 +644,9 @@ export default function FeaturesPage() {
                   transition={{ duration: 0.6 }}
                   className="bg-gray-900 rounded-lg p-8 border border-green-500/20"
                 >
-                  <h3 className="text-2xl font-bold mb-6 text-center">Interactive AI Tutor Demo</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-center">
+                    Interactive AI Tutor Demo
+                  </h3>
 
                   <div className="space-y-6">
                     {/* Simulated Chat Interface */}
@@ -565,7 +661,10 @@ export default function FeaturesPage() {
                             <Brain className="h-4 w-4 text-white" />
                           </div>
                           <div className="bg-green-600/20 rounded-lg p-3 max-w-xs">
-                            <p className="text-sm">Hello! I'm your AI tutor. What would you like to learn today?</p>
+                            <p className="text-sm">
+                              Hello! I'm your AI tutor. What would you like to
+                              learn today?
+                            </p>
                           </div>
                         </motion.div>
 
@@ -576,7 +675,9 @@ export default function FeaturesPage() {
                           className="flex items-start space-x-3 justify-end"
                         >
                           <div className="bg-blue-600/20 rounded-lg p-3 max-w-xs">
-                            <p className="text-sm">Can you explain machine learning in simple terms?</p>
+                            <p className="text-sm">
+                              Can you explain machine learning in simple terms?
+                            </p>
                           </div>
                           <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                             <span className="text-xs font-bold">You</span>
@@ -594,8 +695,10 @@ export default function FeaturesPage() {
                           </div>
                           <div className="bg-green-600/20 rounded-lg p-3 max-w-xs">
                             <p className="text-sm">
-                              Think of machine learning like teaching a child to recognize animals. You show them many
-                              pictures, and eventually they learn to identify cats, dogs, and birds on their own!
+                              Think of machine learning like teaching a child to
+                              recognize animals. You show them many pictures,
+                              and eventually they learn to identify cats, dogs,
+                              and birds on their own!
                             </p>
                           </div>
                         </motion.div>
@@ -608,7 +711,10 @@ export default function FeaturesPage() {
                         <Mic className="h-4 w-4 mr-2" />
                         Start Voice Chat
                       </Button>
-                      <Button variant="outline" className="border-green-500 text-green-400 bg-transparent">
+                      <Button
+                        variant="outline"
+                        className="border-green-500 text-green-400 bg-transparent"
+                      >
                         <MessageSquare className="h-4 w-4 mr-2" />
                         Type Message
                       </Button>
@@ -638,7 +744,9 @@ export default function FeaturesPage() {
                           whileHover={{ scale: 1.05 }}
                           className="bg-gray-800 rounded-lg p-4 text-center"
                         >
-                          <div className="text-green-400 mb-2 flex justify-center">{item.icon}</div>
+                          <div className="text-green-400 mb-2 flex justify-center">
+                            {item.icon}
+                          </div>
                           <h4 className="font-semibold mb-1">{item.title}</h4>
                           <p className="text-sm text-gray-400">{item.desc}</p>
                         </motion.div>
@@ -671,7 +779,9 @@ export default function FeaturesPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-green-400">AI Capabilities</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-400">
+                AI Capabilities
+              </h3>
               <ul className="space-y-2 text-gray-300">
                 {[
                   "Natural Language Processing (NLP)",
@@ -700,29 +810,30 @@ export default function FeaturesPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Platform Features</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-400">
+                Platform Features
+              </h3>
               <ul className="space-y-2 text-gray-300">
-                {[
-                  "Cloud-based Infrastructure",
-                  "Enterprise SSO",
-                ].map((item, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center"
-                  >
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                    {item}
-                  </motion.li>
-                ))}
+                {["Cloud-based Infrastructure", "Enterprise SSO"].map(
+                  (item, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-center"
+                    >
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {item}
+                    </motion.li>
+                  )
+                )}
               </ul>
             </motion.div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

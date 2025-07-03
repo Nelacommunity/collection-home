@@ -1,9 +1,51 @@
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Clock, Users, Star, BookOpen } from "lucide-react"
-import Link from "next/link"
+import { Metadata } from "next";
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Clock, Users, Star, BookOpen } from "lucide-react";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "AI Courses - Learn AI & Voice Technology | Collection",
+  description:
+    "Explore comprehensive AI and voice technology courses. From AI fundamentals to advanced applications, learn with personalized voice-powered lessons and expert guidance.",
+  keywords: [
+    "AI courses",
+    "voice technology courses",
+    "machine learning",
+    "artificial intelligence training",
+    "voice recognition",
+    "AI education",
+  ],
+  openGraph: {
+    title: "AI Courses - Learn AI & Voice Technology | Collection",
+    description:
+      "Explore comprehensive AI and voice technology courses with personalized voice-powered lessons.",
+    type: "website",
+    url: "https://student.acyrx.com/courses",
+    siteName: "Collection",
+    images: [
+      {
+        url: "/courses-og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Courses - Collection Learning Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Courses - Learn AI & Voice Technology",
+    description:
+      "Explore comprehensive AI and voice technology courses with personalized learning.",
+    images: ["/courses-og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function CoursesPage() {
   const courses = [
@@ -19,7 +61,8 @@ export default function CoursesPage() {
     },
     {
       title: "Voice Technology Mastery",
-      description: "Master voice recognition, synthesis, and natural language processing technologies.",
+      description:
+        "Master voice recognition, synthesis, and natural language processing technologies.",
       duration: "8 weeks",
       students: "1.8k",
       rating: 4.8,
@@ -28,7 +71,8 @@ export default function CoursesPage() {
     },
     {
       title: "Advanced AI Applications",
-      description: "Build real-world AI applications with hands-on projects and expert guidance.",
+      description:
+        "Build real-world AI applications with hands-on projects and expert guidance.",
       duration: "12 weeks",
       students: "950",
       rating: 4.9,
@@ -37,7 +81,8 @@ export default function CoursesPage() {
     },
     {
       title: "Business AI Strategy",
-      description: "Learn how to implement AI solutions in business environments and drive digital transformation.",
+      description:
+        "Learn how to implement AI solutions in business environments and drive digital transformation.",
       duration: "4 weeks",
       students: "3.2k",
       rating: 4.7,
@@ -46,7 +91,8 @@ export default function CoursesPage() {
     },
     {
       title: "Ethics in AI",
-      description: "Explore the ethical implications of AI technology and responsible development practices.",
+      description:
+        "Explore the ethical implications of AI technology and responsible development practices.",
       duration: "3 weeks",
       students: "1.5k",
       rating: 4.8,
@@ -55,27 +101,28 @@ export default function CoursesPage() {
     },
     {
       title: "AI for Healthcare",
-      description: "Discover how AI is revolutionizing healthcare with practical applications and case studies.",
+      description:
+        "Discover how AI is revolutionizing healthcare with practical applications and case studies.",
       duration: "10 weeks",
       students: "800",
       rating: 4.9,
       level: "Intermediate",
       topics: ["Medical AI", "Diagnostics", "Healthcare Analytics"],
     },
-  ]
+  ];
 
   const getLevelColor = (level: string) => {
     switch (level) {
       case "Beginner":
-        return "bg-green-600/20 text-green-400"
+        return "bg-green-600/20 text-green-400";
       case "Intermediate":
-        return "bg-yellow-600/20 text-yellow-400"
+        return "bg-yellow-600/20 text-yellow-400";
       case "Advanced":
-        return "bg-red-600/20 text-red-400"
+        return "bg-red-600/20 text-red-400";
       default:
-        return "bg-blue-600/20 text-blue-400"
+        return "bg-blue-600/20 text-blue-400";
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -97,8 +144,9 @@ export default function CoursesPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">AI-Powered Courses</h1>
           <p className="text-xl text-gray-300">
-            Explore our comprehensive collection of AI and voice technology courses, designed to take you from beginner
-            to expert with personalized learning paths.
+            Explore our comprehensive collection of AI and voice technology
+            courses, designed to take you from beginner to expert with
+            personalized learning paths.
           </p>
         </div>
       </div>
@@ -114,14 +162,22 @@ export default function CoursesPage() {
               >
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <Badge className={getLevelColor(course.level)}>{course.level}</Badge>
+                    <Badge className={getLevelColor(course.level)}>
+                      {course.level}
+                    </Badge>
                     <div className="flex items-center space-x-1">
                       <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                      <span className="text-sm text-gray-300">{course.rating}</span>
+                      <span className="text-sm text-gray-300">
+                        {course.rating}
+                      </span>
                     </div>
                   </div>
-                  <CardTitle className="text-white text-xl mb-3">{course.title}</CardTitle>
-                  <p className="text-gray-300 text-sm mb-4">{course.description}</p>
+                  <CardTitle className="text-white text-xl mb-3">
+                    {course.title}
+                  </CardTitle>
+                  <p className="text-gray-300 text-sm mb-4">
+                    {course.description}
+                  </p>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
@@ -150,12 +206,11 @@ export default function CoursesPage() {
                   </div>
 
                   <Link href="collection.acyrx.com">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">   
-                    <BookOpen className="h-4 w-4 mr-2" />
-                    Start Learning
-                  </Button>
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                      <BookOpen className="h-4 w-4 mr-2" />
+                      Start Learning
+                    </Button>
                   </Link>
-                 
                 </CardContent>
               </Card>
             ))}
@@ -166,17 +221,23 @@ export default function CoursesPage() {
       {/* CTA Section */}
       <div className="py-20 px-4 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Start Your AI Journey?</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Start Your AI Journey?
+          </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Join thousands of learners who are already mastering AI with Collection's voice-powered learning platform.
+            Join thousands of learners who are already mastering AI with
+            Collection's voice-powered learning platform.
           </p>
           <Link href="collection.acyrx.com">
-          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3">
-            Start Your Courses
-          </Button>
+            <Button
+              size="lg"
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3"
+            >
+              Start Your Courses
+            </Button>
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

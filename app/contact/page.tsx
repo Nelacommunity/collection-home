@@ -1,13 +1,13 @@
-"use client"
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect"
-import type React from "react"
+"use client";
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import type React from "react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react"
-import { useState } from "react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,22 +15,24 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    console.log("Form submitted:", formData)
+    console.log("Form submitted:", formData);
     // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" })
-  }
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -51,8 +53,8 @@ export default function ContactPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">Get in Touch</h1>
           <p className="text-xl text-gray-300">
-            Have questions about Collection? We'd love to hear from you. Send us a message and we'll respond as soon as
-            possible.
+            Have questions about Collection? We'd love to hear from you. Send us
+            a message and we'll respond as soon as possible.
           </p>
         </div>
       </div>
@@ -64,13 +66,18 @@ export default function ContactPage() {
             {/* Contact Form */}
             <Card className="bg-gray-900 border-green-500/20">
               <CardHeader>
-                <CardTitle className="text-white text-2xl">Send us a Message</CardTitle>
+                <CardTitle className="text-white text-2xl">
+                  Send us a Message
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Name
                       </label>
                       <Input
@@ -85,7 +92,10 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Email
                       </label>
                       <Input
@@ -102,7 +112,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Subject
                     </label>
                     <Input
@@ -118,7 +131,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Message
                     </label>
                     <Textarea
@@ -133,7 +149,10 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white">
+                  <Button
+                    type="submit"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  >
                     <MessageCircle className="h-4 w-4 mr-2" />
                     Send Message
                   </Button>
@@ -145,7 +164,9 @@ export default function ContactPage() {
             <div className="space-y-8">
               <Card className="bg-gray-900 border-green-500/20">
                 <CardHeader>
-                  <CardTitle className="text-white text-2xl">Contact Information</CardTitle>
+                  <CardTitle className="text-white text-2xl">
+                    Contact Information
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-center space-x-4">
@@ -169,7 +190,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-white font-medium">Address</p>
                       <p className="text-gray-300">
-                        Mbezi 
+                        Mbezi
                         <br />
                         Dar-es-salaam
                       </p>
@@ -180,7 +201,9 @@ export default function ContactPage() {
 
               <Card className="bg-gray-900 border-green-500/20">
                 <CardHeader>
-                  <CardTitle className="text-white text-xl">Office Hours</CardTitle>
+                  <CardTitle className="text-white text-xl">
+                    Office Hours
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2 text-gray-300">
@@ -205,8 +228,9 @@ export default function ContactPage() {
                   <p className="text-gray-300 text-sm">
                     <strong className="text-white">Need immediate help?</strong>
                     <br />
-                    Our AI assistant is available 24/7 to answer common questions and provide instant support through
-                    our chat interface.
+                    Our AI assistant is available 24/7 to answer common
+                    questions and provide instant support through our chat
+                    interface.
                   </p>
                 </CardContent>
               </Card>
@@ -215,5 +239,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

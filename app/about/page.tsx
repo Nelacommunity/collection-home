@@ -1,6 +1,57 @@
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mic, Brain, Users, Zap, Target, Award, Globe, Rocket } from "lucide-react"
+import { Metadata } from "next";
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Mic,
+  Brain,
+  Users,
+  Zap,
+  Target,
+  Award,
+  Globe,
+  Rocket,
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Collection - Our Story & Mission | AI Voice Learning",
+  description:
+    "Learn about Collection's founders, mission, and journey in revolutionizing education through AI-powered voice technology. Meet Brown Mafuru and Aaron Victor.",
+  keywords: [
+    "about collection",
+    "AI education founders",
+    "voice learning mission",
+    "Brown Mafuru",
+    "Aaron Victor",
+    "AI learning platform",
+  ],
+  openGraph: {
+    title: "About Collection - Our Story & Mission | AI Voice Learning",
+    description:
+      "Learn about Collection's founders, mission, and journey in revolutionizing education through AI-powered voice technology.",
+    type: "website",
+    url: "https://student.acyrx.com/about",
+    siteName: "Collection",
+    images: [
+      {
+        url: "/about-og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Collection - AI Voice Learning Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Collection - Our Story & Mission",
+    description:
+      "Learn about Collection's founders and mission in AI-powered voice learning.",
+    images: ["/about-og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -22,9 +73,11 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">About Collection</h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Collection is revolutionizing education through AI-powered voice interaction. Launched in 2024, our platform
-            combines cutting-edge artificial intelligence with natural voice processing to create personalized learning
-            experiences that adapt to each student's unique needs.
+            Collection is revolutionizing education through AI-powered voice
+            interaction. Launched in 2024, our platform combines cutting-edge
+            artificial intelligence with natural voice processing to create
+            personalized learning experiences that adapt to each student's
+            unique needs.
           </p>
         </div>
       </div>
@@ -41,12 +94,18 @@ export default function AboutPage() {
                   <div className="w-40 h-40 rounded-full bg-gradient-to-br from-green-400 to-green-600 mb-6 flex items-center justify-center">
                     <span className="text-4xl font-bold text-white">BM</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-1 text-white">Brown Mafuru</h3>
-                  <p className="text-green-400 font-medium mb-4">Co-Founder & CEO</p>
+                  <h3 className="text-2xl font-bold mb-1 text-white">
+                    Brown Mafuru
+                  </h3>
+                  <p className="text-green-400 font-medium mb-4">
+                    Co-Founder & CEO
+                  </p>
                   <p className="text-gray-300 mb-6">
-                    With a background in AI research and educational technology, Brown leads Collection's vision to
-                    democratize education through voice-powered AI. His passion for accessible learning drives our
-                    mission to create personalized educational experiences for everyone.
+                    With a background in AI research and educational technology,
+                    Brown leads Collection's vision to democratize education
+                    through voice-powered AI. His passion for accessible
+                    learning drives our mission to create personalized
+                    educational experiences for everyone.
                   </p>
                   <div className="flex space-x-4">
                     <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
@@ -85,12 +144,18 @@ export default function AboutPage() {
                   <div className="w-40 h-40 rounded-full bg-gradient-to-br from-green-600 to-green-400 mb-6 flex items-center justify-center">
                     <span className="text-4xl font-bold text-white">AV</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-1 text-white">Aaron Victor</h3>
-                  <p className="text-green-400 font-medium mb-4">Co-Founder & CTO</p>
+                  <h3 className="text-2xl font-bold mb-1 text-white">
+                    Aaron Victor
+                  </h3>
+                  <p className="text-green-400 font-medium mb-4">
+                    Co-Founder & CTO
+                  </p>
                   <p className="text-gray-300 mb-6">
-                    Aaron brings extensive expertise in voice recognition technology and machine learning to Collection.
-                    His innovative approach to AI development has been instrumental in creating our adaptive learning
-                    platform that responds to each user's unique needs and learning style.
+                    Aaron brings extensive expertise in voice recognition
+                    technology and machine learning to Collection. His
+                    innovative approach to AI development has been instrumental
+                    in creating our adaptive learning platform that responds to
+                    each user's unique needs and learning style.
                   </p>
                   <div className="flex space-x-4">
                     <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
@@ -133,9 +198,11 @@ export default function AboutPage() {
             <div className="bg-gray-900 rounded-lg p-8 border-l-4 border-green-500">
               <h3 className="text-2xl font-bold mb-4">The Beginning</h3>
               <p className="text-gray-300 leading-relaxed">
-                Collection was born from a shared vision between Brown Mafuru and Aaron Victor in late 2024. Both had
-                experienced firsthand the limitations of traditional education and saw the potential for AI to create
-                more personalized, accessible learning experiences. After months of research and development, they
+                Collection was born from a shared vision between Brown Mafuru
+                and Aaron Victor in late 2024. Both had experienced firsthand
+                the limitations of traditional education and saw the potential
+                for AI to create more personalized, accessible learning
+                experiences. After months of research and development, they
                 officially launched Collection in mid 2025.
               </p>
             </div>
@@ -143,19 +210,23 @@ export default function AboutPage() {
             <div className="bg-gray-900 rounded-lg p-8 border-l-4 border-green-500">
               <h3 className="text-2xl font-bold mb-4">2025 Launch</h3>
               <p className="text-gray-300 leading-relaxed">
-                In July 2025, Collection debuted its revolutionary voice-powered AI learning platform. Within just
-                months of launch, we've achieved remarkable growth, onboarding over 100+ users. Our rapid success demonstrates the
-                significant demand for more intuitive, personalized learning solutions.
+                In July 2025, Collection debuted its revolutionary voice-powered
+                AI learning platform. Within just months of launch, we've
+                achieved remarkable growth, onboarding over 100+ users. Our
+                rapid success demonstrates the significant demand for more
+                intuitive, personalized learning solutions.
               </p>
             </div>
 
             <div className="bg-gray-900 rounded-lg p-8 border-l-4 border-green-500">
               <h3 className="text-2xl font-bold mb-4">Looking Forward</h3>
               <p className="text-gray-300 leading-relaxed">
-                Though we're just getting started, our vision extends far beyond our current offerings. We're actively
-                developing new features, expanding our course library, and refining our AI to better understand diverse
-                learning needs. By the end of 2025, we aim to reach 1 million learners and expand our language support
-                to over 75 languages.
+                Though we're just getting started, our vision extends far beyond
+                our current offerings. We're actively developing new features,
+                expanding our course library, and refining our AI to better
+                understand diverse learning needs. By the end of 2025, we aim to
+                reach 1 million learners and expand our language support to over
+                75 languages.
               </p>
             </div>
           </div>
@@ -165,7 +236,9 @@ export default function AboutPage() {
       {/* Mission & Goals Section */}
       <div className="py-20 px-4 bg-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Mission & Goals</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Our Mission & Goals
+          </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <div className="bg-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
@@ -173,22 +246,29 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                To democratize education by making high-quality, personalized learning accessible to everyone through
-                the power of voice-enabled AI. We believe that education should adapt to the learner, not the other way
-                around.
+                To democratize education by making high-quality, personalized
+                learning accessible to everyone through the power of
+                voice-enabled AI. We believe that education should adapt to the
+                learner, not the other way around.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <span className="text-green-400 mr-2">✓</span>
-                  <span>Make education accessible across language barriers</span>
+                  <span>
+                    Make education accessible across language barriers
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-2">✓</span>
-                  <span>Personalize learning to individual needs and styles</span>
+                  <span>
+                    Personalize learning to individual needs and styles
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-2">✓</span>
-                  <span>Create learning experiences that feel natural and engaging</span>
+                  <span>
+                    Create learning experiences that feel natural and engaging
+                  </span>
                 </li>
               </ul>
             </div>
@@ -199,8 +279,10 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">2025 Goals</h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                As a newly launched company, we've set ambitious goals for our first year of operation. We're committed
-                to rapid growth while maintaining the highest standards of educational quality and user experience.
+                As a newly launched company, we've set ambitious goals for our
+                first year of operation. We're committed to rapid growth while
+                maintaining the highest standards of educational quality and
+                user experience.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -213,15 +295,21 @@ export default function AboutPage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-2">✓</span>
-                  <span>Achieve 75+ language support for global accessibility</span>
+                  <span>
+                    Achieve 75+ language support for global accessibility
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-2">✓</span>
-                  <span>Partner with 50 universities and educational institutions</span>
+                  <span>
+                    Partner with 50 universities and educational institutions
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-2">✓</span>
-                  <span>Launch enterprise solutions for businesses and schools</span>
+                  <span>
+                    Launch enterprise solutions for businesses and schools
+                  </span>
                 </li>
               </ul>
             </div>
@@ -232,17 +320,21 @@ export default function AboutPage() {
       {/* Achievements Section */}
       <div className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Early Achievements</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Early Achievements
+          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="bg-gray-900 border-green-500/20">
               <CardHeader>
                 <Award className="h-12 w-12 text-green-400 mb-4" />
-                <CardTitle className="text-white">Tech Innovator Award</CardTitle>
+                <CardTitle className="text-white">
+                  Tech Innovator Award
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  Recognized as "Most Promising EdTech Startup" at the 2024 Global AI Summit within our first quarter of
-                  operation.
+                  Recognized as "Most Promising EdTech Startup" at the 2024
+                  Global AI Summit within our first quarter of operation.
                 </p>
               </CardContent>
             </Card>
@@ -254,7 +346,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  Achieved 100,000+ active users within the first three months, with a 92% user retention rate.
+                  Achieved 100,000+ active users within the first three months,
+                  with a 92% user retention rate.
                 </p>
               </CardContent>
             </Card>
@@ -266,7 +359,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  Expanded to 15 countries and established partnerships with 12 leading educational institutions.
+                  Expanded to 15 countries and established partnerships with 12
+                  leading educational institutions.
                 </p>
               </CardContent>
             </Card>
@@ -278,7 +372,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  Achieved 99.5% voice recognition accuracy across diverse accents and speaking patterns.
+                  Achieved 99.5% voice recognition accuracy across diverse
+                  accents and speaking patterns.
                 </p>
               </CardContent>
             </Card>
@@ -290,7 +385,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  Pioneered emotional intelligence algorithms that detect and respond to learner emotions in real-time.
+                  Pioneered emotional intelligence algorithms that detect and
+                  respond to learner emotions in real-time.
                 </p>
               </CardContent>
             </Card>
@@ -302,7 +398,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300">
-                  Users report 40% faster comprehension of complex topics compared to traditional learning methods.
+                  Users report 40% faster comprehension of complex topics
+                  compared to traditional learning methods.
                 </p>
               </CardContent>
             </Card>
@@ -316,34 +413,45 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-8">Our Core Values</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-800 p-8 rounded-lg border-t-4 border-green-500">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Accessibility</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-400">
+                Accessibility
+              </h3>
               <p className="text-gray-300">
-                We believe education should be available to everyone, regardless of background, location, or
-                circumstances. Our platform is designed to break down barriers to learning.
+                We believe education should be available to everyone, regardless
+                of background, location, or circumstances. Our platform is
+                designed to break down barriers to learning.
               </p>
             </div>
 
             <div className="bg-gray-800 p-8 rounded-lg border-t-4 border-green-500">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Innovation</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-400">
+                Innovation
+              </h3>
               <p className="text-gray-300">
-                We continuously push the boundaries of what's possible with AI and voice technology to create
-                increasingly natural and effective learning experiences.
+                We continuously push the boundaries of what's possible with AI
+                and voice technology to create increasingly natural and
+                effective learning experiences.
               </p>
             </div>
 
             <div className="bg-gray-800 p-8 rounded-lg border-t-4 border-green-500">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Personalization</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-400">
+                Personalization
+              </h3>
               <p className="text-gray-300">
-                We recognize that every learner is unique. Our AI adapts to individual learning styles, paces, and
-                preferences to optimize educational outcomes.
+                We recognize that every learner is unique. Our AI adapts to
+                individual learning styles, paces, and preferences to optimize
+                educational outcomes.
               </p>
             </div>
 
             <div className="bg-gray-800 p-8 rounded-lg border-t-4 border-green-500">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Integrity</h3>
+              <h3 className="text-xl font-semibold mb-4 text-green-400">
+                Integrity
+              </h3>
               <p className="text-gray-300">
-                We maintain the highest standards of data privacy, educational accuracy, and ethical AI development in
-                everything we do.
+                We maintain the highest standards of data privacy, educational
+                accuracy, and ethical AI development in everything we do.
               </p>
             </div>
           </div>
@@ -355,9 +463,10 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Join Our Journey</h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
-            As a newly launched company with ambitious goals, we're just beginning our journey to transform education.
-            We invite you to be part of this exciting chapter as we work to make personalized, voice-powered learning
-            accessible to everyone around the world.
+            As a newly launched company with ambitious goals, we're just
+            beginning our journey to transform education. We invite you to be
+            part of this exciting chapter as we work to make personalized,
+            voice-powered learning accessible to everyone around the world.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -376,5 +485,5 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
