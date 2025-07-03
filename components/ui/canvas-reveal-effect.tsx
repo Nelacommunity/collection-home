@@ -154,9 +154,9 @@ const ShaderMaterial = ({
   maxFps?: number
   uniforms: Uniforms
 }) => {
-  const { size } = useThree()
-  const ref = useRef<THREE.Mesh>()
-  let lastFrameTime = 0
+  const { size } = useThree();
+  const ref = useRef<THREE.Mesh>(null);
+  let lastFrameTime = 0;
 
   useFrame(({ clock }) => {
     if (!ref.current) return
